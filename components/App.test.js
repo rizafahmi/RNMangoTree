@@ -29,11 +29,16 @@ describe('Renders <App />', () => {
 })
 
 describe('State of the App', () => {
-  let app
+  let app, appInstance
   beforeEach(() => {
     app = shallow(<App />)
+    appInstance = app.instance()
   })
   test('initial state of age should be 0', () => {
-    expect(app.instance().state.age).toEqual(0)
+    expect(appInstance.state.age).toEqual(0)
+  })
+  test('age state is 1 when simulateAge triggered', () => {
+    app.instance().simulateAge()
+    expect(appInstance.state.age).toEqual(1)
   })
 })
