@@ -3,37 +3,36 @@ import {
   View,
   Text,
   Button,
-  StyleSheet,
-  Platform
+  StatusBar
 } from 'react-native'
+
+import styles from './App.css'
 
 const NoOp = () => {}
 
 const App = (props) => {
   return (
     <View style={styles.container}>
-      <Text>Mango Tree</Text>
-      <View>
-        <Text>Some stats...</Text>
+      <StatusBar
+        backgroundColor='#29434e'
+        barStyle='light-content'
+   />
+      <View style={styles.header}>
+        <Text style={styles.headerText}>Mango Tree</Text>
       </View>
-      <Button
-        title='Simulate'
-        onPress={() => NoOp}
+      <View style={styles.stats}>
+        <Text style={styles.statsText}>Age: </Text>
+        <Text style={styles.statsText}>0</Text>
+      </View>
+      <View style={styles.buttons}>
+        <Button
+          title='Simulate'
+          onPress={() => NoOp}
+          color='#546e7a'
       />
+      </View>
     </View>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-    ...Platform.select({
-      ios: {
-        marginTop: 22
-      }
-    })
-  }
-})
 export default App
