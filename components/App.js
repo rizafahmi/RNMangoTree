@@ -19,6 +19,12 @@ class App extends React.Component {
     }
   }
 
+  simulateAge () {
+    this.setState({
+      age: this.state.age + 1
+    })
+  }
+
   render () {
     return (
       <View style={styles.container}>
