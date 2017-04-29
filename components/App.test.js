@@ -27,3 +27,13 @@ describe('Renders <App />', () => {
     })
   })
 })
+
+describe('State of the App', () => {
+  let app
+  beforeEach(() => {
+    app = shallow(<App />)
+  })
+  test('initial state of age should be 0', () => {
+    expect(app.instance().state.age).toEqual(0)
+  })
+})
