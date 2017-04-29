@@ -19,6 +19,9 @@ describe('Renders <App />', () => {
     test('should render stats text', () => {
       expect(app.find('Text').nodes[1].props.children).toEqual('Some stats...')
     })
-    test('should render simulate button')
+    test('should render simulate button', () => {
+      expect(app.find('Button')).toHaveLength(1)
+      expect(app.find('Button').props().title).toEqual('Simulate')
+    })
   })
 })
