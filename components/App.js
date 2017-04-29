@@ -1,11 +1,14 @@
 import React from 'react'
 import {
-  View
+  View,
+  Text
 } from 'react-native'
 
 const App = (props) => {
   return (
-    <View />
+    <View>
+      <Text>Mango Tree</Text>
+    </View>
   )
 }
 
