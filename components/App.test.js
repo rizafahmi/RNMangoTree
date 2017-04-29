@@ -14,10 +14,11 @@ describe('Renders <App />', () => {
   })
   describe('<App /> should have header text, stats text and simulate button', () => {
     test('should render header text', () => {
-      expect(app.find('Text')).toHaveLength(1)
-      expect(app.find('Text').props().children).toEqual('Mango Tree')
+      expect(app.find('Text').nodes[0].props.children).toEqual('Mango Tree')
     })
-    test('should render stats text')
+    test('should render stats text', () => {
+      expect(app.find('Text').nodes[1].props.children).toEqual('Some stats...')
+    })
     test('should render simulate button')
   })
 })
