@@ -37,12 +37,12 @@ class App extends React.Component {
         </View>
         <View style={styles.stats}>
           <Text style={styles.statsText}>Age: </Text>
-          <Text style={styles.statsText}>0</Text>
+          <Text style={styles.statsText}>{ this.state.age }</Text>
         </View>
         <View style={styles.buttons}>
           <Button
             title='Simulate'
-            onPress={() => NoOp}
+            onPress={() => this.simulateAge()}
             color='#546e7a'
       />
         </View>
