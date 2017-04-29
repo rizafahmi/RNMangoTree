@@ -8,6 +8,9 @@ const App = (props) => {
   return (
     <View>
       <Text>Mango Tree</Text>
+      <View>
+        <Text>Some stats...</Text>
+      </View>
     </View>
   )
 }
