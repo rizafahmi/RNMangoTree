@@ -1,8 +1,11 @@
 import React from 'react'
 import {
   View,
-  Text
+  Text,
+  Button
 } from 'react-native'
+
+const NoOp = () => {}
 
 const App = (props) => {
   return (
@@ -11,6 +14,10 @@ const App = (props) => {
       <View>
         <Text>Some stats...</Text>
       </View>
+      <Button
+        title='Simulate'
+        onPress={() => NoOp}
+      />
     </View>
   )
 }
