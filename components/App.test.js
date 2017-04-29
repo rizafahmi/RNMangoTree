@@ -4,9 +4,10 @@ import { shallow } from 'enzyme'
 import App from './App.js'
 
 describe('Renders <App />', () => {
-  let app
+  let app, texts
   beforeEach(() => {
     app = shallow(<App />)
+    texts = app.find('Text')
   })
   test('<App /> should render properly', () => {
     expect(app).toBeDefined()
@@ -14,10 +15,11 @@ describe('Renders <App />', () => {
   })
   describe('<App /> should have header text, stats text and simulate button', () => {
     test('should render header text', () => {
-      expect(app.find('Text').nodes[0].props.children).toEqual('Mango Tree')
+      expect(texts.nodes[0].props.children).toEqual('Mango Tree')
     })
     test('should render stats text', () => {
-      expect(app.find('Text').nodes[1].props.children).toEqual('Some stats...')
+      expect(texts.nodes[1].props.children).toEqual('Age: ')
+      expect(texts.nodes[2].props.children).toEqual('0')
     })
     test('should render simulate button', () => {
       expect(app.find('Button')).toHaveLength(1)
