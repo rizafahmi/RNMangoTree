@@ -15,7 +15,8 @@ class App extends React.Component {
 
     this.state = {
       age: 0,
-      height: 0
+      height: 0,
+      stopAge: _.random(5, 35)
     }
   }
 
@@ -25,10 +26,13 @@ class App extends React.Component {
     })
   }
   simulateHeight () {
-    const randomHeight = _.random(1, 10)
-    this.setState({
-      height: this.state.height + randomHeight
-    })
+    const { age, height, stopAge } = this.state
+    if (age <= stopAge) {
+      const randomHeight = _.random(1, 10)
+      this.setState({
+        height: height + randomHeight
+      })
+    }
   }
 
   render () {
@@ -42,7 +46,7 @@ class App extends React.Component {
           <Text style={styles.headerText}>Mango Tree</Text>
         </View>
         <View style={styles.stats}>
-          <Text style={styles.statsText}>Age: { this.state.age }</Text>
+          <Text style={styles.statsText}>Age: { this.state.age } ( {this.state.stopAge} )</Text>
           <Text style={styles.statsText}>Height: { this.state.height }</Text>
         </View>
         <View style={styles.buttons}>
