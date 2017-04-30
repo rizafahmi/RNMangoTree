@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
   stats: {
     height: '80%',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%'
