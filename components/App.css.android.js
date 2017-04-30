@@ -24,6 +24,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%'
   },
+  deadStats: {
+    height: '80%',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    backgroundColor: '#e74c3c'
+  },
   statsText: {
     fontSize: 36,
     fontWeight: 'bold'
