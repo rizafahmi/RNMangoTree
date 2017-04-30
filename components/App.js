@@ -13,7 +13,8 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      age: 0
+      age: 0,
+      height: 0
     }
   }
 
