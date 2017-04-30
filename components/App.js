@@ -3,14 +3,14 @@ import {
   View,
   Text,
   Button,
-  StatusBar,
-  Image
+  StatusBar
 } from 'react-native'
 import _ from 'lodash'
 
 import styles from './App.css'
 import StatsComponent from './StatComponent.js'
 import DeadComponent from './DeadComponent.js'
+import MangoImage from './MangoImage.js'
 
 class App extends React.Component {
   constructor (props) {
@@ -57,8 +57,8 @@ class App extends React.Component {
         <View style={styles.header}>
           <Text style={styles.headerText}>Mango Tree</Text>
         </View>
-        <View>
-          <Image source={require('./img/mango-tree-growth-0.png')} />
+        <View style={styles.mangoImage}>
+          <MangoImage {...this.state} />
         </View>
         { !this.state.deadStatus ? <StatsComponent {...this.state} /> : <DeadComponent /> }
         <View style={styles.buttons}>

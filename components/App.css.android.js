@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     paddingLeft: 22
   },
+  mangoImage: {
+    height: '45%'
+  },
   stats: {
     height: '35%',
     flexDirection: 'column',
@@ -25,7 +28,7 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   deadStats: {
-    height: '80%',
+    height: '35%',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
