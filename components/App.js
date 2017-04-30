@@ -3,7 +3,8 @@ import {
   View,
   Text,
   Button,
-  StatusBar
+  StatusBar,
+  Image
 } from 'react-native'
 import _ from 'lodash'
 
@@ -55,6 +56,9 @@ class App extends React.Component {
    />
         <View style={styles.header}>
           <Text style={styles.headerText}>Mango Tree</Text>
+        </View>
+        <View>
+          <Image source={require('./img/mango-tree-growth-0.png')} />
         </View>
         { !this.state.deadStatus ? <StatsComponent {...this.state} /> : <DeadComponent /> }
         <View style={styles.buttons}>

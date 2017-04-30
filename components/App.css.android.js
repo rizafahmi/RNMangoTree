@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#E1E2E1'
+    backgroundColor: '#fff'
   },
   header: {
     backgroundColor: '#546e7a',
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     paddingLeft: 22
   },
   stats: {
-    height: '80%',
+    height: '35%',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
