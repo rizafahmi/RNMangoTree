@@ -55,11 +55,13 @@ describe('State of the App', () => {
   })
 })
 
-test.skip('Simulate click for button', (done) => {
+test('Simulate click for button', (done) => {
   const app = shallow(<App />)
   const button = app.find('Button')
+  const texts = app.find('Text')
   expect(app.instance().state.age).toEqual(0)
+  expect(app.instance().state.height).toEqual(0)
   button.simulate('click')
-  expect(app.state().age).toEqual(1)
+  expect(texts.nodes[2].props.children).toEqual(1)
   done()
 })
