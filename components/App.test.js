@@ -49,6 +49,10 @@ describe('State of the App', () => {
     expect(texts.nodes[2].props.children).toEqual(1)
     done()
   })
+
+  test('initial state of height should be 0', () => {
+    expect(appInstance.state.height).toEqual(0)
+  })
 })
 
 test.skip('Simulate click for button', (done) => {
