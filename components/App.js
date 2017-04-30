@@ -8,8 +8,6 @@ import {
 
 import styles from './App.css'
 
-const NoOp = () => {}
-
 class App extends React.Component {
   constructor (props) {
     super(props)
@@ -38,6 +36,8 @@ class App extends React.Component {
         <View style={styles.stats}>
           <Text style={styles.statsText}>Age: </Text>
           <Text style={styles.statsText}>{ this.state.age }</Text>
+          <Text>Height: </Text>
+          <Text>{0}</Text>
         </View>
         <View style={styles.buttons}>
           <Button
