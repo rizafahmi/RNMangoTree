@@ -8,6 +8,8 @@ import {
 import _ from 'lodash'
 
 import styles from './App.css'
+import StatsComponent from './StatComponent.js'
+import DeadComponent from './DeadComponent.js'
 
 class App extends React.Component {
   constructor (props) {
@@ -45,19 +47,6 @@ class App extends React.Component {
   }
 
   render () {
-    const statsComponent = (
-
-      <View style={styles.stats}>
-        <Text style={styles.statsText}>Age: { this.state.age } ( {this.state.stopAge} ) ( {this.state.deadAge} )</Text>
-        <Text style={styles.statsText}>Height: { this.state.height }</Text>
-      </View>
-    )
-
-    const deadComponent = (
-      <View style={styles.deadStats}>
-        <Text style={styles.statsText}>Sorry, your tree was dead! My condolences.</Text>
-      </View>
-    )
     return (
       <View style={styles.container}>
         <StatusBar
@@ -67,7 +56,7 @@ class App extends React.Component {
         <View style={styles.header}>
           <Text style={styles.headerText}>Mango Tree</Text>
         </View>
-        { !this.state.deadStatus ? statsComponent : deadComponent }
+        { !this.state.deadStatus ? <StatsComponent {...this.state} /> : <DeadComponent /> }
         <View style={styles.buttons}>
           <Button
             title='Simulate'
